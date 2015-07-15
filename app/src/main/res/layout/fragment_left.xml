@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.com.myapplication.fragmentdemo.LeftFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/fragment_left"
         android:layout_width="wrap_content"

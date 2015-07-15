@@ -4,7 +4,6 @@
     android:background="#ffffff"
     tools:context="com.example.com.myapplication.fragmentdemo.AnotherRightFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/fragment_another_right"
         android:layout_width="match_parent"
