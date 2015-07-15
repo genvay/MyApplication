@@ -2,10 +2,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
 
     <TextView
@@ -20,19 +16,59 @@
         android:id="@+id/show_toast_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_centerHorizontal="true"
         android:text="@string/show_toast"
-        android:textAllCaps="false"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true" />
+        android:textAllCaps="false" />
 
     <Button
+        android:id="@+id/hello_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Activity"
-        android:id="@+id/activity_button"
+        android:layout_alignEnd="@id/show_toast_button"
+        android:layout_alignRight="@id/show_toast_button"
         android:layout_below="@+id/show_toast_button"
-        android:layout_alignRight="@+id/show_toast_button"
-        android:layout_alignEnd="@+id/show_toast_button"
-        android:textAllCaps="false"/>
+        android:text="Hello World"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/activity_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hello_button"
+        android:layout_centerHorizontal="true"
+        android:text="Activity" />
+
+    <Button
+        android:id="@+id/ui_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_button"
+        android:layout_centerHorizontal="true"
+        android:text="UI" />
+
+    <Button
+        android:id="@+id/list_view_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ui_button"
+        android:layout_centerHorizontal="true"
+        android:text="ListView" />
+
+    <Button
+        android:id="@+id/talk_demo_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/list_view_button"
+        android:layout_centerHorizontal="true"
+        android:text="TalkDemo" />
+
+    <Button
+        android:id="@+id/fragment_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/talk_demo_button"
+        android:layout_centerHorizontal="true"
+        android:text="Fragment" />
 
 </RelativeLayout>

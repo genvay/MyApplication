@@ -1,0 +1,14 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.example.com.myapplication.fragmentdemo.AnotherRightFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/fragment_another_right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/another_right_fragment" />
+
+</LinearLayout>

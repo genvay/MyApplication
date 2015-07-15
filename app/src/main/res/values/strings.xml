@@ -10,4 +10,10 @@
     <string name="title_activity_third">ThirdActivity</string>
     <string name="title_activity_listview">ListviewActivity</string>
     <string name="title_activity_talk">TalkActivity</string>
+
+    <string name="left_fragment">left fragment</string>
+    <string name="right_fragment">right fragment</string>
+    <string name="another_right_fragment">another_right fragment</string>
+    <string name="title_activity_fragment_demo">FragmentDemoActivity</string>
+
 </resources>
