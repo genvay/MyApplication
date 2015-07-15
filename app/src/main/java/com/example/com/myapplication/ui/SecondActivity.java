@@ -7,6 +7,7 @@ import android.widget.Button;
 
 import com.example.com.myapplication.R;
 import com.example.com.myapplication.activity.BaseActivity;
+import com.example.com.myapplication.listview.ListviewActivity;
 
 /**
  * Created by Administrator on 2015/7/12.
@@ -23,6 +24,15 @@ public class SecondActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SecondActivity.this, FirstActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btToListView = (Button) findViewById(R.id.ui_second_to_listview);
+        btToListView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SecondActivity.this, ListviewActivity.class);
                 startActivity(intent);
             }
         });

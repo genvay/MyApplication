@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.com.myapplication.R;
 import com.example.com.myapplication.activity.BaseActivity;
@@ -26,5 +27,8 @@ public class FirstActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+
+
+
     }
 }

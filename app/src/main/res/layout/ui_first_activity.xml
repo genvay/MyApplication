@@ -4,7 +4,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include layout="@layout/title" />
+    <!--<include layout="@layout/title" />-->
+
+    <com.example.com.myapplication.ui.TitleLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></com.example.com.myapplication.ui.TitleLayout>
+
+    <com.example.com.myapplication.ui.TitleLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ></com.example.com.myapplication.ui.TitleLayout>
 
     <EditText
         android:id="@+id/ui_first_username"

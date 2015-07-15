@@ -2,7 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
 
-    <include layout="@layout/title" />
+    <!--<include layout="@layout/title" />-->
+
+    <com.example.com.myapplication.ui.TitleLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></com.example.com.myapplication.ui.TitleLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -14,5 +18,11 @@
         android:layout_height="wrap_content"
         android:id="@+id/ui_second_to1"
         android:text="to FirstActivity"/>
+
+    <Button
+        android:id="@+id/ui_second_to_listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="to ListView"/>
 
 </LinearLayout>
