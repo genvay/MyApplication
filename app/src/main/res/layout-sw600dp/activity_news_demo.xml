@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.com.myapplication.newsdemo.NewsDemoActivity">
+
+    <fragment
+        android:id="@+id/news_title_fragment"
+        android:name="com.example.com.myapplication.newsdemo.NewsTitleFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.example.com.myapplication.newsdemo.NewsContentFragment"
+            />
+
+    </FrameLayout>
+
+</RelativeLayout>

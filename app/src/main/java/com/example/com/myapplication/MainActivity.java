@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.example.com.myapplication.fragmentdemo.FragmentDemoActivity;
 import com.example.com.myapplication.helloworld.FirstActivity;
 import com.example.com.myapplication.listview.ListviewActivity;
+import com.example.com.myapplication.newsdemo.NewsDemoActivity;
 import com.example.com.myapplication.talkdemo.TalkActivity;
 
 
@@ -85,6 +86,16 @@ public class MainActivity extends ActionBarActivity {
                 startActivity(intent);
             }
         });
+
+        Button btNewsDemo = (Button) findViewById(R.id.news_demo_button);
+        btNewsDemo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, NewsDemoActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 
