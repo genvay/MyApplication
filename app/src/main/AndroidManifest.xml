@@ -84,10 +84,14 @@
 
         <receiver android:name=".broadcast.BootCompleteReceiver" >
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
+        <activity
+            android:name=".file.FileActivity"
+            android:label="@string/title_activity_file" >
+        </activity>
     </application>
 
 </manifest>
