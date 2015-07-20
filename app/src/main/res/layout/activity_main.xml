@@ -79,4 +79,12 @@
         android:layout_centerHorizontal="true"
         android:text="News Demo"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/broadcast_button"
+        android:layout_below="@id/news_demo_button"
+        android:layout_centerHorizontal="true"
+        android:text="BoardCast"/>
+
 </RelativeLayout>

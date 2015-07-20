@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.com.myapplication.broadcast.BroadcastActivity;
 import com.example.com.myapplication.fragmentdemo.FragmentDemoActivity;
 import com.example.com.myapplication.helloworld.FirstActivity;
 import com.example.com.myapplication.listview.ListviewActivity;
@@ -92,6 +93,15 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, NewsDemoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btBroadCast = (Button) findViewById(R.id.broadcast_button);
+        btBroadCast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, BroadcastActivity.class);
                 startActivity(intent);
             }
         });
