@@ -87,4 +87,12 @@
         android:layout_centerHorizontal="true"
         android:text="BoardCast"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/file_button"
+        android:layout_below="@id/broadcast_button"
+        android:layout_centerHorizontal="true"
+        android:text="File"/>
+
 </RelativeLayout>

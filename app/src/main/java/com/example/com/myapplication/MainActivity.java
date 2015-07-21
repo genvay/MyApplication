@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.com.myapplication.broadcast.BroadcastActivity;
+import com.example.com.myapplication.file.FileActivity;
 import com.example.com.myapplication.fragmentdemo.FragmentDemoActivity;
 import com.example.com.myapplication.helloworld.FirstActivity;
 import com.example.com.myapplication.listview.ListviewActivity;
@@ -106,7 +107,14 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
-
+        Button btFile = (Button) findViewById(R.id.file_button);
+        btFile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, FileActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }
