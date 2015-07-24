@@ -92,6 +92,14 @@
             android:name=".file.FileActivity"
             android:label="@string/title_activity_file" >
         </activity>
+        <activity
+            android:name=".file.LoginResultActivity"
+            android:label="@string/title_activity_login_result" >
+        </activity>
+        <activity
+            android:name=".file.SqliteActivity"
+            android:label="@string/title_activity_sqlite" >
+        </activity>
     </application>
 
 </manifest>

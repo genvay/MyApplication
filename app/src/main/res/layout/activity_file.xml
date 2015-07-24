@@ -39,21 +39,21 @@
         android:layout_centerHorizontal="true"
         android:text="file content" />
 
-    <TextView
+    <EditText
         android:id="@+id/shared_preference_input_key"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/file_text_view"
         android:layout_centerHorizontal="true"
-        android:text="key" />
+        android:hint="key" />
 
-    <TextView
+    <EditText
         android:id="@+id/shared_preference_input_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/shared_preference_input_key"
         android:layout_centerHorizontal="true"
-        android:text="value" />
+        android:hint="value" />
 
     <Button
         android:id="@+id/shared_preference_save_button"
@@ -61,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/shared_preference_input_value"
         android:layout_centerHorizontal="true"
-        android:text="key-value" />
+        android:text="save key-value" />
 
     <Button
         android:id="@+id/shared_preference_get_button"
@@ -72,10 +72,80 @@
         android:text="get value" />
 
     <TextView
+        android:id="@+id/shared_preference_key_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/shared_preference_get_button"
         android:layout_centerHorizontal="true"
         android:text="value" />
+
+
+    <!--login demo-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_demo_username_text"
+        android:text="username"
+        android:layout_below="@+id/shared_preference_key_value"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_demo_username_input"
+        android:layout_below="@+id/shared_preference_key_value"
+        android:layout_alignLeft="@id/file_save_file"
+        android:layout_alignStart="@id/file_save_file"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_demo_password_text"
+        android:layout_below="@id/login_demo_username_input"
+        android:text="password"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_demo_password_input"
+        android:layout_below="@+id/login_demo_username_input"
+        android:layout_alignLeft="@id/file_save_file"
+        android:layout_alignStart="@id/file_save_file"
+        android:layout_alignRight="@+id/login_demo_username_input"
+        android:layout_alignEnd="@+id/login_demo_username_input" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_demo_remember_password"
+        android:layout_below="@id/login_demo_password_input"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="remember password"
+        android:layout_below="@id/login_demo_password_input"
+        android:layout_alignLeft="@id/file_save_file"
+        android:id="@+id/textView2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_demo_login_button"
+        android:text="login"
+        android:layout_below="@id/login_demo_remember_password"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/to_sqlite"
+        android:text="to sqlite"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2" />
 
 </RelativeLayout>
