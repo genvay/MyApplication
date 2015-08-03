@@ -4,7 +4,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -126,10 +126,10 @@
             android:name=".http.HttpUrlConnectionActivity"
             android:label="@string/title_activity_http_url_connection" >
         </activity>
-
-
-
-
+        <activity
+            android:name=".http.HttpClientActivity"
+            android:label="@string/title_activity_http_client" >
+        </activity>
     </application>
 
 </manifest>

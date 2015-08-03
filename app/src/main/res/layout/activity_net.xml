@@ -19,7 +19,8 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="http demo2"
+        android:text="HttpClient demo"
+        android:id="@+id/net_http_client"
         android:layout_below="@id/http_url_connection"
         />
 

@@ -29,5 +29,6 @@
     <string name="title_activity_my_content">NetActivity</string>
     <string name="title_activity_net_web_view">NetWebViewActivity</string>
     <string name="title_activity_http_url_connection">HttpUrlConnectionActivity</string>
+    <string name="title_activity_http_client">HttpClientActivity</string>
 
 </resources>

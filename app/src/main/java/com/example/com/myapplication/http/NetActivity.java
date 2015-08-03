@@ -24,6 +24,9 @@ public class NetActivity extends Activity implements View.OnClickListener{
         Button bt2 = (Button) findViewById(R.id.http_url_connection);
         bt2.setOnClickListener(this);
 
+        Button bt3 = (Button) findViewById(R.id.net_http_client);
+        bt3.setOnClickListener(this);
+
     }
 
     @Override
@@ -38,6 +41,10 @@ public class NetActivity extends Activity implements View.OnClickListener{
                 break;
             case R.id.http_url_connection:
                 intent = new Intent(NetActivity.this, HttpUrlConnectionActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.net_http_client:
+                intent = new Intent(NetActivity.this, HttpClientActivity.class);
                 startActivity(intent);
                 break;
             default:
