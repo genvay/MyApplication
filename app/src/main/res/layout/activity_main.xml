@@ -1,4 +1,4 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,91 +8,122 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:text="@string/hello_world" />
 
-    <Button
-        android:id="@+id/show_toast_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView"
-        android:layout_centerHorizontal="true"
-        android:text="@string/show_toast"
-        android:textAllCaps="false" />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/hello_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@id/show_toast_button"
-        android:layout_alignRight="@id/show_toast_button"
-        android:layout_below="@+id/show_toast_button"
-        android:text="Hello World"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/show_toast_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/show_toast"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/activity_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/hello_button"
-        android:layout_centerHorizontal="true"
-        android:text="Activity" />
+        <Button
+            android:id="@+id/hello_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Hello World"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/ui_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/activity_button"
-        android:layout_centerHorizontal="true"
-        android:text="UI" />
+        <Button
+            android:id="@+id/activity_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_weight="1"
+            android:text="Activity" />
+    </TableRow>
 
-    <Button
-        android:id="@+id/list_view_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ui_button"
-        android:layout_centerHorizontal="true"
-        android:text="ListView" />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/talk_demo_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/list_view_button"
-        android:layout_centerHorizontal="true"
-        android:text="TalkDemo" />
+        <Button
+            android:id="@+id/ui_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_weight="1"
+            android:text="UI" />
 
-    <Button
-        android:id="@+id/fragment_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/talk_demo_button"
-        android:layout_centerHorizontal="true"
-        android:text="Fragment" />
+        <Button
+            android:id="@+id/list_view_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:text="ListView" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/news_demo_button"
-        android:layout_below="@id/fragment_button"
-        android:layout_centerHorizontal="true"
-        android:text="News Demo"/>
+        <Button
+            android:id="@+id/talk_demo_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_weight="1"
+            android:text="TalkDemo" />
+    </TableRow>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/broadcast_button"
-        android:layout_below="@id/news_demo_button"
-        android:layout_centerHorizontal="true"
-        android:text="BoardCast"/>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/file_button"
-        android:layout_below="@id/broadcast_button"
-        android:layout_centerHorizontal="true"
-        android:text="File"/>
+        <Button
+            android:id="@+id/fragment_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_weight="1"
+            android:text="Fragment" />
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/news_demo_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:text="News Demo" />
+
+        <Button
+            android:id="@+id/broadcast_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_weight="1"
+            android:text="BoardCast" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/file_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_weight="1"
+            android:text="File" />
+
+        <Button
+            android:id="@+id/content_provider_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_weight="1"
+            android:text="ContentProvider" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/network_button"
+            android:text="network"
+            />
+    </TableRow>
+
+
+</TableLayout>
