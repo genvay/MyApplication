@@ -22,4 +22,17 @@
             android:id="@+id/net_http_client_web_view"/>
     </ScrollView>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/apps_show_button"
+        android:text="show hot apps"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/apps_list_view">
+
+    </ListView>
+
 </LinearLayout>

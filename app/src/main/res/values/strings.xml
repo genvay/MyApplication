@@ -17,7 +17,6 @@
     <string name="title_activity_fragment_demo">FragmentDemoActivity</string>
     <string name="title_activity_news_demo">NewsDemoActivity</string>
 
-<!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_broadcast">BroadcastActivity</string>
     <string name="title_activity_file">FileActivity</string>

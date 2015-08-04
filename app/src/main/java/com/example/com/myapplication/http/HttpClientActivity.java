@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.com.myapplication.R;
@@ -24,6 +25,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class HttpClientActivity extends ActionBarActivity implements View.OnClickListener {
@@ -31,9 +33,13 @@ public class HttpClientActivity extends ActionBarActivity implements View.OnClic
     private static final String TAG = "HttpClientActivity";
 
     public static final int SHOW_MESSAGE = 0;
+    public static final int SHOW_APPS = 1;
 
-    Button mSendButton;
+    Button mSendButton, mShowAppsBt;
     TextView mTextView;
+    ListView mListView;
+
+    List<App> apps;
 
     Handler handler = new Handler() {
         @Override
@@ -41,6 +47,11 @@ public class HttpClientActivity extends ActionBarActivity implements View.OnClic
             switch (msg.what) {
                 case SHOW_MESSAGE:
                     mTextView.setText(String.valueOf(msg.obj));
+                    break;
+                case SHOW_APPS:
+                    AppAdapter adapter = new AppAdapter(HttpClientActivity.this, R.layout.app_item, apps);
+                    mListView.setAdapter(adapter);
+                    break;
             }
         }
     };
@@ -54,6 +65,10 @@ public class HttpClientActivity extends ActionBarActivity implements View.OnClic
         mSendButton = (Button) findViewById(R.id.net_send_http_client);
         mSendButton.setOnClickListener(this);
         mTextView = (TextView) findViewById(R.id.net_http_client_web_view);
+
+        mShowAppsBt = (Button) findViewById(R.id.apps_show_button);
+        mShowAppsBt.setOnClickListener(this);
+        mListView = (ListView) findViewById(R.id.apps_list_view);
     }
 
     @Override
@@ -61,6 +76,8 @@ public class HttpClientActivity extends ActionBarActivity implements View.OnClic
 
         if (v.getId() == R.id.net_send_http_client) {
             sendRequestWithHttpClient();
+        } else if (v.getId() == R.id.apps_show_button) {
+            parseHotApps();
         }
     }
 
@@ -158,6 +175,47 @@ public class HttpClientActivity extends ActionBarActivity implements View.OnClic
             Log.e(TAG, "package: " + app.getPackageName());
             Log.e(TAG, "appid: " + app.getAppid());
         }
+
+    }
+
+    private void parseHotApps() {
+
+        Log.e(TAG, "HttpClientActivity.parseHotApps is called");
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+                try {
+                    HttpClient httpClient = new DefaultHttpClient();
+                    HttpGet httpGet = new HttpGet("http://api.app.i.sogou.com/27/search/hot");
+                    HttpResponse httpResponse = httpClient.execute(httpGet);
+
+                    if (httpResponse.getStatusLine().getStatusCode() == 200) {
+
+                        HttpEntity httpEntity = httpResponse.getEntity();
+                        String response = EntityUtils.toString(httpEntity, "utf-8");
+
+                        Gson gson = new Gson();
+                        HotAppsBean hotApps = gson.fromJson(response, HotAppsBean.class);
+
+                        apps = new ArrayList<App>();
+                        for (int i = 0; i < hotApps.getData().getList().size(); i++) {
+                            apps.add(hotApps.getData().getList().get(i));
+                        }
+
+                        Message message = new Message();
+                        message.what = SHOW_APPS;
+                        handler.sendMessage(message);
+
+                    }
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }).start();
 
     }
 
