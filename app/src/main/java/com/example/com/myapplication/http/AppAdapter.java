@@ -23,6 +23,11 @@ public class AppAdapter extends ArrayAdapter<App> {
         resourceId = textViewSourceId;
     }
 
+    public AppAdapter(Context context, int resource, List<App> objects, int resourceId) {
+        super(context, resource, objects);
+        this.resourceId = resourceId;
+    }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 

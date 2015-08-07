@@ -130,6 +130,10 @@
             android:name=".http.HttpClientActivity"
             android:label="@string/title_activity_http_client" >
         </activity>
+        <activity
+            android:name=".httpdemo.HttpUrlConnectionDemoActivity"
+            android:label="@string/title_activity_http_url_connection_demo" >
+        </activity>
     </application>
 
 </manifest>

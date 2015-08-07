@@ -24,4 +24,11 @@
         android:layout_below="@id/http_url_connection"
         />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HttpURLConnection plus"
+        android:id="@+id/http_url_connection_plus"
+        android:layout_below="@id/net_http_client"/>
+
 </RelativeLayout>

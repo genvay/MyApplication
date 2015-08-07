@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.com.myapplication.R;
+import com.example.com.myapplication.httpdemo.HttpUrlConnectionDemoActivity;
 
 /**
  * Created by Administrator on 2015/8/2.
@@ -27,6 +28,9 @@ public class NetActivity extends Activity implements View.OnClickListener{
         Button bt3 = (Button) findViewById(R.id.net_http_client);
         bt3.setOnClickListener(this);
 
+        Button bt4 = (Button) findViewById(R.id.http_url_connection_plus);
+        bt4.setOnClickListener(this);
+
     }
 
     @Override
@@ -45,6 +49,10 @@ public class NetActivity extends Activity implements View.OnClickListener{
                 break;
             case R.id.net_http_client:
                 intent = new Intent(NetActivity.this, HttpClientActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.http_url_connection_plus:
+                intent = new Intent(NetActivity.this, HttpUrlConnectionDemoActivity.class);
                 startActivity(intent);
                 break;
             default:
